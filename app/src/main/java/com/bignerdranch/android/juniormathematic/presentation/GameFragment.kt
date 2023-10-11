@@ -21,6 +21,7 @@ class GameFragment : Fragment() {
         super.onCreate(savedInstanceState)
         parsArgs()
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -35,17 +36,21 @@ class GameFragment : Fragment() {
         binding.tvOption1.setOnClickListener {
             launchGameFinishedFragment(
                 GameResult(
-                true,
-                0,
-                0,
-                GameSettings(0,0,0,0)
-            )
+                    true,
+                    0,
+                    0,
+                    GameSettings(0, 0, 0, 0)
+                )
             )
         }
     }
+
     private fun parsArgs() {
-        level = requireArguments().getSerializable(KEY_LEVEL) as Level
+        requireArguments().getParcelable<Level>(KEY_LEVEL)?.let {
+            level = it
+        }
     }
+
     private fun launchGameFinishedFragment(gameResult: GameResult) {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.main_container, GameFinishedFragment.newInstance(gameResult))
@@ -57,13 +62,14 @@ class GameFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
     companion object {
         const val NAME = "GameFragment"
         private const val KEY_LEVEL = "level"
         fun newInstance(level: Level): GameFragment {
             return GameFragment().apply {
                 arguments = Bundle().apply {
-                    putSerializable(KEY_LEVEL, level)
+                    putParcelable(KEY_LEVEL, level)
                 }
             }
         }
