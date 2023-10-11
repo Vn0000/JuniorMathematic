@@ -1,10 +1,12 @@
 package com.bignerdranch.android.juniormathematic.domain.entity
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class GameResult(
     val winner: Boolean,
     val countOfRightAnswers: Int,
     val countOFQuestions: Int,
     val gameSettings: GameSettings
-): Serializable
+): Parcelable
