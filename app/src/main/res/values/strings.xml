@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Junior mathematic</string>
+    <string name="title_on_welcome_page">Состав числа</string>
+    <string name="game_rues">   Правила игры: перед вами будет три фигуры, две снизу и одна сверху, в двух из них будут числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре, для этого нужно вставить недостающее число.
+
+    Пример: в верхнем круге число 7, в одном из нижних знаков вопроса, а в другом число 4. Значит на месте вопросительного знака должно быть число 3, потому что 3+4=7</string>
+    <string name="question_mark">\?</string>
+    <string name="retry">Снова</string>
+    <string name="progress_answer">правильных ответов %s(минимуум s%)</string>
+    <string name="required_answer">Необходимое количество правильных ответов: %s</string>
+    <string name="score_answer">Ваш счёт: %S</string>
+    <string name="required_percentage">Необходимый процент правильных ответов: %S</string>
+    <string name="score_percentage">Процент правильных ответов: %S</string>
 </resources>
