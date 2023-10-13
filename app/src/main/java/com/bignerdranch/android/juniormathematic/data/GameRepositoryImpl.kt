@@ -28,7 +28,7 @@ object GameRepositoryImpl : GameRepository {
         return Question(sum, visibleNumber, options.toList())
     }
 
-    override fun getGameSettings(level: Level): GameSettings {
+    override fun getGameSettings(level: java.util.logging.Level): GameSettings {
         return when (level) {
             Level.TEST -> {
                 GameSettings(

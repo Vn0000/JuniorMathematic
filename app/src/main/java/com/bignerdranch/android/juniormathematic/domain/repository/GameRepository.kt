@@ -1,7 +1,6 @@
 package com.bignerdranch.android.juniormathematic.domain.repository
 
 import com.bignerdranch.android.juniormathematic.domain.entity.GameSettings
-import com.bignerdranch.android.juniormathematic.domain.entity.Level
 import com.bignerdranch.android.juniormathematic.domain.entity.Question
 
 interface GameRepository {
@@ -11,5 +10,5 @@ interface GameRepository {
         countOfOptions: Int
     ): Question
 
-    fun getGameSettings(level: Level): GameSettings
+    fun getGameSettings(level: java.util.logging.Level): GameSettings
 }
