@@ -44,5 +44,4 @@ class WelcomeFragment : Fragment() {
             return WelcomeFragment()
         }
     }
-
 }
